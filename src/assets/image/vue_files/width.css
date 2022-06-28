@@ -1,0 +1,65 @@
+.Content,.center,.themes-list{width:1200px}
+.BtmSorts,.SameBox{width:1198px}
+.footer{width:1200px}
+.Content .Primary{width:920px}
+.SameBox .ImgLi,.SameBox .ImgLi2{width:980px}
+.SameBox .sGame{width:980px}
+.hide{display:block}
+#FixNav{margin-left:605px}
+#rFixApp{margin-left:600px}
+.Content .AllSites li.BtLine,.Content .HotSites,.Content .HotSites li.BtLine{width:896px}
+.Content .HotSites li{width:149px}
+.Content .sortSite li a{width:110px}
+.SameBox .sGame li{margin:0 11px 2px}
+.BtmSorts .w1{width:224px}
+.BtmSorts .w2{width:336px}
+.BtmSorts .w3,.BtmSorts .w4{width:280px}
+.BtmSorts .w4{_right:0px;}
+.BtmSorts .bx{padding-left:18px}
+.BtmSorts .bx li{width:40px}
+#imgArr{margin-left:30px}
+.header .calendar{padding:18px 0 14px 20px;width:155px;}
+.header .calendar li a.le{width:105px;}
+/*
+.header .box-weather{width:472px;padding-left:20px}
+*/
+.header .box-weather{width:472px;}
+.header .calendar .see{margin-right:10px}
+.weather li{margin-right:8px}
+.header .handle{margin-left:33px}
+.cal-popup i.arrow{width:174px}
+.cal-popup{left:297px}
+.weather-popup{left:166px;border-top:0;padding:5px 21px 15px;}
+.box-weather .weather li{margin-right:10px;}
+.header .box-weather .sevent{right:5px}
+.box-weather .weather li.tWrap, .weather li.mWrap{width:143px;}
+.box-weather .weather li .t{width:95px;}
+.weather-popup i.arrow{display:none;}
+.SearchBox .SerLogo{margin-left:150px}
+.SearchBox .R_Adv{width:286px}
+.usWrap{width:1200px;margin-left:-600px}
+.usInnerWrap{width:1200px}
+.addWebUrl .addTitle{margin-left:190px}
+.usWrap .usErrorTip{left:460px;}
+.FixedSearch .SerMain{margin-left:-320px;}
+.BigBg .FixedSearch .SerLogo{margin:0 0 0 -440px;}
+.Content .sortSite li a.s{width:50px;}
+.AllSites .tmall{display:inline-block;*display:inline;*zoom:1;height:30px;margin-left:8px;overflow:hidden;width:150px;position:absolute;top:5px;}
+.w_live li{width:212px;margin:0 7px 0 10px;overflow:hidden;}
+.itools{width:1198px;}
+.itools .itools_box dd{margin-right:9px;}
+.itools .itools_box{width:271px;}
+.footer .mobile{padding-left:22px;margin-left:10px;font-size:12px;vertical-align:middle;}
+/*今日热点*/
+.todayHotBox .todayHotList{width:898px;}
+.todayHotBox .todayHotList li{width:420px;}
+.todayHotBox .todayHotList li .conts{width:286px}
+.todayHotBox .todayHotList li .conts .bottomRow .tags{max-width:220px;}
+/* 经验数据流 窄屏 */
+.module_useful-exp {
+    width: 918px;
+}
+.module_useful-exp .item {
+    width: 420px;
+}
+/* .left_cat {margin-right: 580px;} */

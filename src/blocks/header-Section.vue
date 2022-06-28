@@ -1,0 +1,67 @@
+<template>
+  <a-page-header class="b-header" :isScroll="isScroll">
+    <template #title>
+      <a-avatar
+        :src="avatar.src"
+        :size="avatar.size || 'large'"
+        :shape="avatar.shape || 'square'"
+      ></a-avatar>
+    </template>
+    <template #tags>
+      <a-tag v-for="tag of tags" :color="tag.color" :key="tag.text">{{tag.text}}</a-tag>
+    </template>
+    <template #extra>
+      <a-button v-for="item of menu" :type="item.type" :key="item.text" @click="item.handle">{{item.text}}</a-button>
+    </template>
+  </a-page-header>
+</template>
+
+<script>
+import { PageHeader } from "ant-design-vue";
+import { useWindowScrollStatus } from "@/use/scroll.js"
+export default {
+  components: {
+    APageHeader: PageHeader,
+  },
+  // 接收绑定的config参数   参数为对象
+  props: {
+    config: {
+      type: Object,
+      // 默认返回本对象
+      default: () => {},
+    },
+  },
+  setup(props) {
+    // 对象解构赋值  并且有默认值
+    const { avatar = {}, tags = [], menu = [] } = props.config || {};
+    const isScroll = useWindowScrollStatus();
+    // return的对象会暴露给template模板
+    return {
+      avatar,
+      tags,
+      menu,
+      isScroll,
+    };
+  },
+};
+</script>
+
+<style scoped>
+.b-header{
+  position: sticky;
+  top:0;
+  z-index: 99;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.b-header:hover{
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.04);
+}
+.b-header[isScroll="true"]{
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.04);
+}
+</style>

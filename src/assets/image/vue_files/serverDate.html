@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://www.114la.com/static/tianqi/serverDate.php?type=iframe_weather -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>114la tongxun</title>
+		<script type="text/javascript">
+			document.domain = window.location.hostname.match(/(114la|114larc)\.com$/i)[0];
+			/**
+			 * 执行基本ajax请求,返回XMLHttpRequest
+			 * Ajax.request(url,{
+			 *      async   是否异步 true(默认)
+			 *      method  请求方式 POST or GET(默认)
+			 *      data    请求参数 (键值对字符串)
+			 *      success 请求成功后响应函数，参数为xhr
+			 *      failure 请求失败后响应函数，参数为xhr
+			 * });
+			 *
+			 */
+			Ajax = function(){
+				function request(url,opt){
+					function fn(){}
+					var async   = opt.async !== false,
+						method  = opt.method    || 'GET',
+						_data    = opt.data      || null,
+						success = opt.success   || fn,
+						failure = opt.failure   || fn;
+						method  = method.toUpperCase();
+					var data = null;
+					if(_data){
+						data = "";
+						for(var key in _data){
+							data += "&" + key + "=" + encodeURIComponent(_data[key]);
+						}
+						data = data.slice(1);
+					}
+					if(method == 'GET' && data){
+						url += (url.indexOf('?') == -1 ? '?' : '&') + data;
+						data = null;
+					}
+					var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+					xhr.onreadystatechange = function(){
+						_onStateChange(xhr,success,failure);
+					};
+					xhr.open(method,url,async);
+					if(method == 'POST'){
+						xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded;');
+					}
+					xhr.send(data);
+					return xhr;
+				}
+				function _onStateChange(xhr,success,failure){
+					if(xhr.readyState == 4){
+						var s = xhr.status;
+						if(s>= 200 && s < 300){
+							success(xhr);
+						}else{
+							failure(xhr);
+						}
+					}else{}
+				}
+				return {request:request};
+			}();
+
+
+
+		</script>
+	</head>
+	<body>
+
+	
+
+</body></html>

@@ -1,2 +1,24 @@
-# Vue3-Antd-Koa2-BlogSystem
-基于Vue3+Antd+Koa2博客系统
+# blog
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
